@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>节能电炉</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="福建圣力智能工业科技股份有限公司">
+    <meta name="description" content="福建圣力智能工业科技股份有限公司是圣力集团在内地投资的全资子公司,股票代码：839110，是一家集科研开发、生产制造、销售服务为一体的综合性企业，主要生产连铸机、轧机、炼钢等冶金设备，公司以技术研发、生产制造、总装总包工程，铸造出华南及东南亚地区五个第一,年产值超亿元，公司生产的“圣力牌”高效连铸机畅销全国二十几个省市，并远销俄罗斯、越南、印尼、伊朗等国家和地区，深受广大用户的喜爱和信赖。">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="SHORTCUT ICON" href="images/icon_01.png">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/holder.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/pager.js"></script>
+</head>
+<body>
+
+<div class="header"></div>
+
+<div class="ad-img"></div>
+
+<div class="w1000 mt75 content">
+
+    <div class="nav-left-box"></div>
+
+    <!-- nav-right start -->
+    <div class="main">
+        <div class="title">
+            <h2>ENERGY-SAVING ELECTRIC FURNACE</h2>
+            <h3>节能电炉</h3>
+        </div>
+
+        <div class="intro">通过金属电极或非金属电极产生电弧加热的工业炉叫电弧炉。气体放电形成电弧时能量很集中，弧区温度在3000℃以上。</div>
+
+        <div class="c2-text">
+            <div class="list-box">
+                <div class="list">
+                    <img src="holder.js/200x174" alt=""/>
+
+                    <h3>钢包精炼炉</h3>
+                </div>
+                <div class="list">
+                    <img src="holder.js/200x174" alt=""/>
+
+                    <h3>钢包精炼炉</h3>
+                </div>
+                <div class="list">
+                    <img src="holder.js/200x174" alt=""/>
+
+                    <h3>钢包精炼炉</h3>
+                </div>
+                <div class="list">
+                    <img src="holder.js/200x174" alt=""/>
+
+                    <h3>钢包精炼炉</h3>
+                </div>
+                <div class="list">
+                    <img src="holder.js/200x174" alt=""/>
+
+                    <h3>钢包精炼炉</h3>
+                </div>
+                <div class="list">
+                    <img src="holder.js/200x174" alt=""/>
+
+                    <h3>钢包精炼炉</h3>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="tc mt40 mb100">
+                <ul class="pagination" id="page1"></ul>
+            </div>
+        </div>
+    </div>
+    <!-- nav-right end -->
+</div>
+
+<div class="foot"></div>
+
+</body>
+
+<script src="js/index.js"></script>
+<script>
+
+    $(function(){
+        $(".nav-left-box").load('nav-left-product.html',function(){
+            $(".nav-left-box ul li").each(function(){
+                if($(this).attr("title")==="节能电炉"){
+                    $(this).addClass("on");
+                }
+            });
+        });
+        Page({
+            num:4,					//页码数
+            startnum:1,				//指定初始页码
+            elem:$('#page1'),		//指定的元素
+            callback:function(n){	//回调函数 n:页码
+                console.log(n);
+            }
+        });
+    });
+</script>
+</html>

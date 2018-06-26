@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function Fn(){
+        this.x=100;
+        this.getX=function(){
+            console.log(this.x);
+        };
+        return {name:'珠峰'};
+    }
+    var f1 = new Fn;
+    console.log(f1);
+</script>
+</html>
