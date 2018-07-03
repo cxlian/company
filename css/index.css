@@ -96,6 +96,7 @@ a:link {
 .nav .nav-list .nav-inline li .drop-menu li a{font-size: 14px;height: 40px;display: block;}
 
 /*** banner ***/
+/*
 .banner{position:relative;width:100%;overflow:hidden}
 .tp-caption{z-index:1}
 .tp-leftarrow:hover,.tp-rightarrow:hover{background-position:bottom left}
@@ -106,6 +107,7 @@ a:link {
 .tp-simpleresponsive .slotholder *,.tp-simpleresponsive img{-webkit-transform:translateZ(0);-webkit-backface-visibility:hidden;-webkit-perspective:1000}
 .tp-simpleresponsive .caption,.tp-simpleresponsive .tp-caption{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-moz-opacity:0;-khtml-opacity:0;opacity:0;position:absolute;visibility:hidden}
 .tp-simpleresponsive img{max-width:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-o-user-select:none}
+*/
 
 /*** 首页正文 ***/
 .floor_main_1{text-align:center;margin-top:80px;margin-bottom:100px}
