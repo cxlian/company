@@ -8,14 +8,44 @@
 
 </body>
 <script>
-    function Fn(){
-        this.x=100;
-        this.getX=function(){
-            console.log(this.x);
-        };
-        return {name:'珠峰'};
+/*    function CreateJSPerson(name,age){
+        this.name=name;
+        this.age=age;
     }
-    var f1 = new Fn;
-    console.log(f1);
+    CreateJSPerson.prototype.writeJs = function () {
+        console.log("my name is "+this.name+",i can write js 啦~~");
+    };
+
+    var p1=new CreateJSPerson("张三",18);
+    var p2=new CreateJSPerson("王小波",48);
+
+    console.log(p1.writeJs === p2.writeJs);//true*/
+
+    //每一个函数数据类型（普通函数、类）都有一个天生自带的属性：prototype（原型），并且这个属性是一个对象数据类型的值
+    //并且在prototype上浏览器天生给它加了一个属性constructor（构造函数），属性值是当前函数（类）本身
+    //每一个对象数据类型（普通的对象、实例、prototype...）也天生自带一个属性：__proto__。属性值是当前实例所属类的原型prototype
+
+function Fn() {
+    this.x = 100;
+    this.sum = function () {
+        console.log("1");
+    }
+}
+Fn.prototype.getX = function () {
+    console.log(this.x);
+};
+Fn.prototype.sum = function () {
+    console.log("2");
+};
+var f1 = new Fn;
+var f2 = new Fn;
+
+console.log(f1.getX === f2.getX);//true
+console.log(f1.__proto__.getX === f2.getX);//true
+console.log(f1.getX === Fn.prototype.getX);//true
+
+console.log(f1.sum === f2.__proto__.sum);//false
+console.log(f1.sum === Fn.prototype.sum);//false
+
 </script>
 </html>

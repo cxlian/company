@@ -150,6 +150,10 @@ function Page(opt){
 			for(var i=1;i<=n;i++){
 				if(i==set.startnum){
 					html+='<li class="active" page="'+i+'"><a>'+i+'</a></li>';
+                    //起始页为1，回调
+                    if (clickpages.callback){
+                        clickpages.callback(parseInt(i));
+                    }
 				}else{
 					html+='<li page="'+i+'"><a>'+i+'</a></li>';
 				}
@@ -159,6 +163,6 @@ function Page(opt){
 			set.elem.html(html);
 			clickpages.init();
 		}else{
-			clickpages.newPages("jump",set.startnum)
+			clickpages.newPages("jump",set.startnum);
 		}
 }

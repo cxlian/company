@@ -31,104 +31,10 @@
 
             <h3>公司新闻</h3>
         </div>
-        <div class="news-c1-text">
-            <div class="list">
-                <img src="holder.js/135x102" alt=""/>
 
-                <div class="float-box">
-                    <div class="list-left">
-                        <h2>13</h2>
+        <!--新闻列表-->
+        <div class="news-c1-text"></div>
 
-                        <h3>2018-03</h3>
-                    </div>
-                    <div class="list-right">
-                        <h2>凝心聚力 赢在圣力 福建圣力集团2017年太姥山旅游圆满成功</h2>
-
-                        <h3>空气中透着春天的温润，沁人心脾。在这春暖花开的时节，三辆大巴载着满车的欢声笑语从圣力集团总部向那以“风险，石奇，洞幽，雾幻”四绝著称的“海上仙都”太姥山行去。</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="list">
-                <img src="holder.js/135x102" alt=""/>
-
-                <div class="float-box">
-                    <div class="list-left">
-                        <h2>13</h2>
-
-                        <h3>2018-03</h3>
-                    </div>
-                    <div class="list-right">
-                        <h2>凝心聚力 赢在圣力 福建圣力集团2017年太姥山旅游圆满成功</h2>
-
-                        <h3>空气中透着春天的温润，沁人心脾。在这春暖花开的时节，三辆大巴载着满车的欢声笑语从圣力集团总部向那以“风险，石奇，洞幽，雾幻”四绝著称的“海上仙都”太姥山行去。</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="list">
-                <img src="holder.js/135x102" alt=""/>
-
-                <div class="float-box">
-                    <div class="list-left">
-                        <h2>13</h2>
-
-                        <h3>2018-03</h3>
-                    </div>
-                    <div class="list-right">
-                        <h2>凝心聚力 赢在圣力 福建圣力集团2017年太姥山旅游圆满成功</h2>
-
-                        <h3>空气中透着春天的温润，沁人心脾。在这春暖花开的时节，三辆大巴载着满车的欢声笑语从圣力集团总部向那以“风险，石奇，洞幽，雾幻”四绝著称的“海上仙都”太姥山行去。</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="list">
-                <img src="holder.js/135x102" alt=""/>
-
-                <div class="float-box">
-                    <div class="list-left">
-                        <h2>13</h2>
-
-                        <h3>2018-03</h3>
-                    </div>
-                    <div class="list-right">
-                        <h2>凝心聚力 赢在圣力 福建圣力集团2017年太姥山旅游圆满成功</h2>
-
-                        <h3>空气中透着春天的温润，沁人心脾。在这春暖花开的时节，三辆大巴载着满车的欢声笑语从圣力集团总部向那以“风险，石奇，洞幽，雾幻”四绝著称的“海上仙都”太姥山行去。</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="list">
-                <img src="holder.js/135x102" alt=""/>
-
-                <div class="float-box">
-                    <div class="list-left">
-                        <h2>13</h2>
-
-                        <h3>2018-03</h3>
-                    </div>
-                    <div class="list-right">
-                        <h2>凝心聚力 赢在圣力 福建圣力集团2017年太姥山旅游圆满成功</h2>
-
-                        <h3>空气中透着春天的温润，沁人心脾。在这春暖花开的时节，三辆大巴载着满车的欢声笑语从圣力集团总部向那以“风险，石奇，洞幽，雾幻”四绝著称的“海上仙都”太姥山行去。</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="list">
-                <img src="holder.js/135x102" alt=""/>
-
-                <div class="float-box">
-                    <div class="list-left">
-                        <h2>13</h2>
-
-                        <h3>2018-03</h3>
-                    </div>
-                    <div class="list-right">
-                        <h2>凝心聚力 赢在圣力 福建圣力集团2017年太姥山旅游圆满成功</h2>
-
-                        <h3>空气中透着春天的温润，沁人心脾。在这春暖花开的时节，三辆大巴载着满车的欢声笑语从圣力集团总部向那以“风险，石奇，洞幽，雾幻”四绝著称的“海上仙都”太姥山行去。</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="tc mt40 mb100">
             <ul class="pagination" id="page1"></ul>
         </div>
@@ -144,6 +50,7 @@
 <script>
 
     $(function () {
+
         $(".nav-left-news").load('nev-left-news.html', function () {
             $(".nav-left-news ul li").each(function () {
                 if ($(this).attr("title") === "公司新闻") {
@@ -152,17 +59,92 @@
             });
         });
 
+        /*公司新闻列表模块*/
+        var ajaxMyPage = {
+            /*参数*/
+            pagesum : 0,//总页数
+            pagesize: 6,//每页个数
+            startnum:1,//起始页
+            language:'zh',//语言
+            type:1,//类型：公司新闻
 
-        /*页码*/
-        Page({
-            num:4,					//页码数
-            startnum:1,				//指定初始页码
-            elem:$('#page1'),		//指定的元素
-            callback:function(n){	//回调函数 n:页码
-                console.log(n);
+            /*方法*/
+            ajaxGetPageSum : function(){
+                var num;
+                $.ajax({
+                    type:'get',
+                    url:REQUEST_URL+'getNewsList',
+                    async:false,
+                    data:{
+                        language:this.language,
+                        type:this.type,
+                        page:this.startnum,
+                        pageSize:this.pagesize
+                    },
+                    dataType:'json',
+                    success:function(data) {
+                        if (data.code === 0) {
+                            num = parseInt((data.result.total+6-1)/6);//计算页数
+                        }
+                    }
+                });
+                this.pagesum =num;
+            },
+            showPage:function(){
+                Page({
+                    num:this.pagesum,	//页码数
+                    startnum:this.startnum,		//指定初始页码
+                    elem:$('#page1'),		    //指定的元素
+                    callback:function(n){	//回调函数 n:页码
+                        ajaxMyPage.ajaxGetNewsList(n);
+                    }
+                });
+            },
+            ajaxGetNewsList:function(n){
+                $(".news-c1-text").html("");
+
+                $.ajax({
+                    type: 'get',
+                    url: REQUEST_URL + 'getNewsList',
+                    async: false,
+                    data: {
+                        language: 'zh',
+                        type: 1,
+                        page: n,
+                        pageSize: 6
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.code === 0) {
+                            data.result.rows.forEach(function (sourceData) {
+                                var newslist = {
+                                    introduction: sourceData.introduction,//介绍
+                                    newsId: sourceData.newsId,//ID
+                                    path: REQUEST_URL + sourceData.path,//图片
+                                    year_month: sourceData.publishTime.split('-')[0] + '-' + sourceData.publishTime.split('-')[1],//年-月
+                                    day: sourceData.publishTime.split('-')[2],//日
+                                    title: sourceData.title//标题
+                                };
+
+                                var str = '';
+                                str += '<a href="news-detail.html?newsId='+newslist.newsId+'"><div class="list"><img src=' + newslist.path + '/>';
+                                str += '<div class="float-box"><div class="list-left"><h2>' + newslist.day + '</h2><h3>' + newslist.year_month + '</h3></div>';
+                                str += '<div class="list-right"><h2>' + newslist.title + '<h3>' + newslist.introduction + '</h3></div></div></div></a>';
+
+                                $(".news-c1-text").append(str);
+                            });
+                        } else {
+                            alert("操作失败，请联系管理员");
+                        }
+                    }
+                });
             }
-        });
+        };
+
+        ajaxMyPage.ajaxGetPageSum();
+        ajaxMyPage.showPage();
 
     });
 </script>
+<script src="js/browser.min.js"></script>
 </html>

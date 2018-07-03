@@ -11,15 +11,38 @@
                 <li title="高效连铸机"><a href="product-c11.html">高效连铸机</a></li>
                 <li title="高线棒轧机"><a href="product-c12.html">高线棒轧机</a></li>
                 <li title="节能电炉"><a href="product-c13.html">节能电炉</a></li>
-                <li title="自动化配电柜"><a href="javascript:void(0)">自动化配电柜</a></li>
+                <li title="自动化配电柜"><a href="product-c14.html">自动化配电柜</a></li>
             </ul>
         </div>
 
     </div>
-    <div class="tab">
-        <h2>NEWS CENTER</h2>
+    <div class="tab gcyj-tab">
+        <h2>PROJECT PERFORMANCE</h2>
         <h3>工程业绩</h3>
     </div>
+
+    <div class="list-box2 gcyj-list">
+        <ul>
+            <li title="企业分布图"><a href="achieve-c15.html">企业分布图</a></li>
+            <li title="成功案例"><a href="achieve-c16.html">成功案例</a></li>
+            <li title="合作共赢"><a href="achieve-c16.html">合作共赢</a></li>
+        </ul>
+    </div>
+
+    <script>
+        $(function(){
+            var isHiden = true;
+            $(".gcyj-list").hide();
+            $(".gcyj-tab").click(function(){
+                if(isHiden){
+                    $(".gcyj-list").show();
+                }else{
+                    $(".gcyj-list").hide();
+                }
+                isHiden = !isHiden;
+            })
+        });
+    </script>
 </div>
 <!-- nav-left end -->
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新闻详情</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="福建圣力智能工业科技股份有限公司">
+    <meta name="description"
+          content="福建圣力智能工业科技股份有限公司是圣力集团在内地投资的全资子公司,股票代码：839110，是一家集科研开发、生产制造、销售服务为一体的综合性企业，主要生产连铸机、轧机、炼钢等冶金设备，公司以技术研发、生产制造、总装总包工程，铸造出华南及东南亚地区五个第一,年产值超亿元，公司生产的“圣力牌”高效连铸机畅销全国二十几个省市，并远销俄罗斯、越南、印尼、伊朗等国家和地区，深受广大用户的喜爱和信赖。">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="SHORTCUT ICON" href="images/icon_01.png">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/holder.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/pager.js"></script>
+</head>
+<body>
+
+<div class="header"></div>
+
+<div class="ad-img-news"></div>
+
+<div class="w1000 mt75 content">
+
+    <div class="nav-left-news"></div>
+    <div class="main">
+        <div class="title">
+            <h2>NEWS DETAILS</h2>
+
+            <h3>新闻详情</h3>
+        </div>
+        <div class="news-detail">
+            <div class="headImg"><img src="images/news-detail.png" alt=""/></div>
+            <div class="updateTime">2017/4/20</div>
+            <div class="newsTitle">
+                凝心聚力 赢在圣力 福建圣力集团2017年太姥山旅游圆满成功
+            </div>
+            <div class="newsHtml">
+                空气中透着春天的温润，沁人心脾。在这春暖花开的时节，三辆大巴载着满车的欢声笑语从圣力集团总部向那以“风险，石奇，洞幽，雾幻”四绝著称的“海上仙都”太姥山行去。
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="foot"></div>
+
+</body>
+
+<script src="js/index.js"></script>
+<script>
+
+    $(function () {
+        $(".nav-left-news").load('nev-left-news.html', function () {
+            $(".nav-left-news ul li").each(function () {
+                if ($(this).attr("title") === "公司新闻") {
+                    $(this).addClass("on");
+                }
+            });
+        });
+
+        /*获取新闻详细模块*/
+        var getNewsDetail = {
+            newsid : null,
+            getNewsId : function() {//获取newsId
+                var url = location.search;
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    var strs = str.split("=");
+                    this.newsid = strs[1];
+                }
+            }
+        };
+        getNewsDetail.getNewsId();
+        console.log(getNewsDetail);
+
+
+    });
+</script>
+</html>
